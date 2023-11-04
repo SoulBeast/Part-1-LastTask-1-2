@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_Part1LastTask1::part1lasttask1" title="Part 1 Last Task 1" module="Perspective_Part1LastTask1" sortOrder="51" resource="Perspective_Part1LastTask1::part1lasttask1"/>
+        <add id="Perspective_Part1LastTask1::part1lasttask1_configuration" title="Configuration" module="Perspective_Part1LastTask1" sortOrder="99" parent="Perspective_Part1LastTask1::part1lasttask1" action="adminhtml/system_config/edit/section/part1lasttask1" resource="Perspective_Part1LastTask1::part1lasttask1_configuration"/>
+    </menu>
+</config>

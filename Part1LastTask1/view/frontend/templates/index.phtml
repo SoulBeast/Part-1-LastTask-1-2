@@ -1,0 +1,34 @@
+<?php
+
+/** @var \Perspective\Part1LastTask1\Block\Template $block */
+
+$viewModel = $block->getViewModel();
+
+$basePrice = $viewModel->_printBasePrice();
+$finalPrice = $viewModel->_printFinalPrice();
+$specialPrice = $viewModel->_printSpecialPrice();
+$tierPrice = $viewModel->_printTierPrice();
+$catalogRulePrice = $viewModel->_printCatalogRulePrice();
+
+if ($viewModel->isEnabled()) :
+    ## ## Base Price ## ##
+    if ($viewModel->isEnabledBasePrice())
+        echo "<h3 style='color:black'>" . "Base Price: " . "</h3>" . "<h3 style='color:red'>"
+        . $basePrice . "</h3>";
+    ## ## Final Price ## ##
+    if ($viewModel->isEnabledFinalPrice())
+        echo "<h3 style='color:black'>" . "Final Price: " . "</h3>" . "<h3 style='color:red'>"
+        . $finalPrice . "</h3>";
+    ## ## Special Price ## ##
+    if ($viewModel->isEnabledSpecialPrice())
+        echo "<h3 style='color:black'>" . "Special Price: " . "</h3>" . "<h3 style='color:red'>"
+        . $specialPrice . "</h3>";
+    ## ## Tier Price ## ##
+    if ($viewModel->isEnabledTierPrice())
+        echo "<h3 style='color:black'>" . "Tier Price: " . "</h3>" . "<h3 style='color:red'>"
+        . $tierPrice . "<br>" . "</h3>";
+    ## ## Catalog Rule Price ## ##
+    if ($viewModel->isEnabledCatalogRulePrice())
+        echo "<h3 style='color:black'>" . "Catalog Rule Price: " . "</h3>" . "<h3 style='color:red'>"
+        . $catalogRulePrice . "</h3>";
+endif;

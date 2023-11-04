@@ -1,0 +1,28 @@
+<?php
+/** @var \Perspective\Part1LastTask2\View\Element\Template $block */
+
+$viewModel = $block->getViewModel();
+
+$minAllTime = $viewModel->getMinEndTime();
+$countdownDate = $viewModel->countdownDate();
+?>
+
+
+<?= "Special Price will end: " . $minAllTime; ?></b><br>
+<?php $viewModel->_printAllCatalogPriceRules(); ?><br>
+
+<div style="display: inline-block; padding: 15px; font-size: 20px; border: 10px solid dodgerblue" id="getting-started"></div>
+<br><br>
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'Perspective_Part1LastTask2/js/jquery.countdown',
+    ],function ($){
+      $("#getting-started").countdown("<?= $countdownDate; ?>", function(event) {
+            $(this).text(
+                event.strftime('%D days %H:%M:%S')
+            );
+        });
+    })
+</script>

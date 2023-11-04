@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="perspective" translate="label" sortOrder="1000">
+            <label>Perspective</label>
+        </tab>
+        <section id="part1lasttask1" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Part 1 Last Task 1</label>
+            <tab>perspective</tab>
+            <resource>Perspective_Part1LastTask1::part1lasttask1_config</resource>
+            <group id="prices_group" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Prices Group</label>
+                <field id="module_functionality" type="select" translate="label,comment,tooltip" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module functionality</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>perspective/general/module_functionality</config_path>
+                </field>
+                <field id="base_price_show" type="select" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Base Price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>perspective/general/base_price_show</config_path>
+                    <depends>
+                        <field id="module_functionality">1</field>
+                    </depends>
+                </field>
+                <field id="final_price_show" type="select" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Final Price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>perspective/general/final_price_show</config_path>
+                    <depends>
+                        <field id="module_functionality">1</field>
+                    </depends>
+                </field>
+                <field id="special_price_show" type="select" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Special Price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>perspective/general/special_price_show</config_path>
+                    <depends>
+                        <field id="module_functionality">1</field>
+                    </depends>
+                </field>
+                <field id="tier_price_show" type="select" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tier Price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>perspective/general/tier_price_show</config_path>
+                    <depends>
+                        <field id="module_functionality">1</field>
+                    </depends>
+                </field>
+                <field id="catalog_rule_price_show" type="select" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Catalog Rule Price show</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>perspective/general/catalog_rule_price_show</config_path>
+                    <depends>
+                        <field id="module_functionality">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
